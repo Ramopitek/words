@@ -11,7 +11,7 @@ class WordsGame
         $this->sessHistory = $_SESSION['words'] ? json_decode($_SESSION['words'], true) : [];
     }
 
-    public function say(string $word, bool $sure = false): array
+    public function say($word, $sure = false): array
     {
         $previousWord = $this->getLastHistory();
         if (!$word) {
